@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lstagram">
-        <activity android:name=".SignUp2Activity"></activity>
+        <activity android:name=".MyInfo_Post"></activity>
+        <activity android:name=".MyInfo_Pass" />
+        <activity android:name=".MyInfo_Delete" />
+        <activity android:name=".MyInfo" />
+        <activity android:name=".SignUp2Activity" />
         <activity android:name=".ForgotActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
