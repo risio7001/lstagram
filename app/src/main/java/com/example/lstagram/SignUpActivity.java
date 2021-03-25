@@ -24,6 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        findViewById(R.id.signUp_reset).setOnClickListener(onclickListener);
         findViewById(R.id.SignUp).setOnClickListener(onclickListener);
 
     }
@@ -34,12 +35,21 @@ public class SignUpActivity extends AppCompatActivity {
               Toast.makeText(this, "회원가입하기", Toast.LENGTH_SHORT).show();
               SignUp();
               break;
-          case R.id.reset:
+          case R.id.signUp_reset:
               Toast.makeText(this, "재입력 바랍니다.", Toast.LENGTH_SHORT).show();
+              reset();
               break;
       }
     };
+    public void reset(){
+        EditText id = findViewById(R.id.signUp_email);
+        EditText pw = findViewById(R.id.signUp_pw);
+        EditText pw2 = findViewById(R.id.signUp_pw2);
+        id.getText().clear();
+        pw.getText().clear();
+        pw2.getText().clear();
 
+    }
 
     public void SignUp(){
         String id = ((EditText) findViewById(R.id.signUp_email)).getText().toString();

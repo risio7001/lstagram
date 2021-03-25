@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="내 정보"
+        android:id="@+id/menu2_myPost"/>
+    <item android:title="고객센터"
+        android:id="@+id/menu2_cs"/>
+    <item android:title="로그아웃"
+        android:id="@+id/menu2_signOut"/>
+</menu>
