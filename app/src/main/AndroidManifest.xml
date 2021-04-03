@@ -3,6 +3,9 @@
     package="com.example.lstagram">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lstagram">
-        <activity android:name=".MyInfo_Post"></activity>
+        <activity android:name=".Gallery"></activity>
+        <activity android:name=".InsertPost" />
+        <activity android:name=".MyInfo_Post" />
         <activity android:name=".MyInfo_Pass" />
         <activity android:name=".MyInfo_Delete" />
         <activity android:name=".MyInfo" />

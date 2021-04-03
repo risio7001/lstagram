@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        findViewById(R.id.insert_Post).setOnClickListener(onclickListener);
+
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
             FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -50,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
+    View.OnClickListener onclickListener = v -> {
+        switch(v.getId()){
+            case R.id.insert_Post:
+                startActivity(InsertPost.class);
+                break;
+        }
+    };
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -79,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(LoginActivity.class);
                 break;
+
         }
     }
     public void startActivity(Class c){
